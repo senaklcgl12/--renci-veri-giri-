@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öğrenci Veri Giriş Ekranı</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Öğrenci Veri Giriş Formu</h1>
+
+        <form id="ogrenciForm">
+            <input type="text" id="adSoyad" placeholder="Ad Soyad">
+            <input type="text" id="ogrNo" placeholder="Öğrenci No">
+            <input type="text" id="bolum" placeholder="Bölüm">
+
+            <select id="sinif">
+                <option value="">Sınıf seç</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+
+            <input type="date" id="dogumTarihi">
+
+            <select id="cinsiyet">
+                <option value="">Cinsiyet</option>
+                <option>Kadın</option>
+                <option>Erkek</option>
+            </select>
+
+            <button type="submit">Kaydet</button>
+            <button type="reset">Temizle</button>
+        </form>
+
+        <p id="mesaj"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

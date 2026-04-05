@@ -1,26 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial;
-    background: #f2f2f2;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e3f2fd, #f8fbff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 .container {
-    width: 300px;
-    margin: 50px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    text-align: center;
+    color: #1f3c88;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+.aciklama {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #333;
 }
 
 input,
-select,
-button {
+select {
     width: 100%;
-    margin-top: 10px;
-    padding: 8px;
+    padding: 12px 14px;
+    border: 1px solid #d0d7e2;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s;
+    background-color: #fafcff;
 }
 
-button {
-    background: blue;
-    color: white;
+input:focus,
+select:focus {
+    border-color: #4a6cf7;
+    box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.12);
+}
+
+.button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.btn {
+    flex: 1;
+    padding: 12px;
     border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.kaydet {
+    background: #4a6cf7;
+    color: white;
+}
+
+.kaydet:hover {
+    background: #3555d6;
+}
+
+.temizle {
+    background: #eef2f7;
+    color: #333;
+}
+
+.temizle:hover {
+    background: #dfe6ee;
+}
+
+#mesaj {
+    margin-top: 18px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
 }

@@ -4,41 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Öğrenci Veri Giriş Ekranı</title>
+    <title>Öğrenci Veri Giriş Formu</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <div class="container">
-        <h1>Öğrenci Veri Giriş Formu</h1>
+        <div class="form-card">
+            <h1>Öğrenci Veri Giriş Formu</h1>
+            <p class="aciklama">Lütfen öğrenci bilgilerini eksiksiz şekilde giriniz.</p>
 
-        <form id="ogrenciForm">
-            <input type="text" id="adSoyad" placeholder="Ad Soyad">
-            <input type="text" id="ogrNo" placeholder="Öğrenci No">
-            <input type="text" id="bolum" placeholder="Bölüm">
+            <form id="ogrenciForm">
+                <div class="form-group">
+                    <label for="adSoyad">Ad Soyad</label>
+                    <input type="text" id="adSoyad" placeholder="Ad Soyad giriniz">
+                </div>
 
-            <select id="sinif">
-                <option value="">Sınıf seç</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-            </select>
+                <div class="form-group">
+                    <label for="ogrNo">Öğrenci Numarası</label>
+                    <input type="text" id="ogrNo" placeholder="Öğrenci numarası giriniz">
+                </div>
 
-            <input type="date" id="dogumTarihi">
+                <div class="form-group">
+                    <label for="bolum">Bölüm</label>
+                    <input type="text" id="bolum" placeholder="Bölüm giriniz">
+                </div>
 
-            <select id="cinsiyet">
-                <option value="">Cinsiyet</option>
-                <option>Kadın</option>
-                <option>Erkek</option>
-            </select>
+                <div class="form-group">
+                    <label for="sinif">Sınıf</label>
+                    <select id="sinif">
+                        <option value="">Sınıf seçiniz</option>
+                        <option>1. Sınıf</option>
+                        <option>2. Sınıf</option>
+                        <option>3. Sınıf</option>
+                        <option>4. Sınıf</option>
+                    </select>
+                </div>
 
-            <button type="submit">Kaydet</button>
-            <button type="reset">Temizle</button>
-        </form>
+                <div class="form-group">
+                    <label for="dogumTarihi">Doğum Tarihi</label>
+                    <input type="date" id="dogumTarihi">
+                </div>
 
-        <p id="mesaj"></p>
+                <div class="form-group">
+                    <label for="cinsiyet">Cinsiyet</label>
+                    <select id="cinsiyet">
+                        <option value="">Cinsiyet seçiniz</option>
+                        <option>Kadın</option>
+                        <option>Erkek</option>
+                        <option>Belirtmek istemiyorum</option>
+                    </select>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn kaydet">Kaydet</button>
+                    <button type="reset" class="btn temizle">Temizle</button>
+                </div>
+            </form>
+
+            <p id="mesaj"></p>
+        </div>
     </div>
 
     <script src="script.js"></script>

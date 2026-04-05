@@ -4,13 +4,30 @@ const mesaj = document.getElementById("mesaj");
 form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const ad = document.getElementById("adSoyad").value;
+    const adSoyad = document.getElementById("adSoyad").value.trim();
+    const ogrNo = document.getElementById("ogrNo").value.trim();
+    const bolum = document.getElementById("bolum").value.trim();
+    const sinif = document.getElementById("sinif").value;
+    const dogumTarihi = document.getElementById("dogumTarihi").value;
+    const cinsiyet = document.getElementById("cinsiyet").value;
 
-    if (ad === "") {
-        mesaj.innerText = "Boş bırakma!";
+    if (
+        adSoyad === "" ||
+        ogrNo === "" ||
+        bolum === "" ||
+        sinif === "" ||
+        dogumTarihi === "" ||
+        cinsiyet === ""
+    ) {
+        mesaj.textContent = "Lütfen tüm alanları eksiksiz doldurunuz.";
         mesaj.style.color = "red";
-    } else {
-        mesaj.innerText = "Kaydedildi!";
-        mesaj.style.color = "green";
+        return;
     }
+
+    mesaj.textContent = "Öğrenci bilgileri başarıyla kaydedildi.";
+    mesaj.style.color = "green";
+});
+
+form.addEventListener("reset", function () {
+    mesaj.textContent = "";
 });

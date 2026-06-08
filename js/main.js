@@ -1,0 +1,1 @@
+console.log("Proje başarıyla çalıştı");
